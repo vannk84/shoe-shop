@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Sticker Pack A",
+    "description": "A pack of colorful stickers.",
+    "price": 5.99,
+    "category": "Fun",
+    "image": "/images/sticker-a.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sticker Pack B",
+    "description": "A pack of nature-themed stickers.",
+    "price": 6.99,
+    "category": "Nature",
+    "image": "/images/sticker-b.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sticker Pack C",
+    "description": "A pack of minimalistic stickers.",
+    "price": 4.99,
+    "category": "Minimal",
+    "image": "/images/sticker-c.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Sticker Pack D",
+    "description": "A pack of animal-themed stickers.",
+    "price": 7.99,
+    "category": "Animals",
+    "image": "/images/sticker-d.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sticker Pack E",
+    "description": "A pack of space-themed stickers.",
+    "price": 8.99,
+    "category": "Space",
+    "image": "/images/sticker-e.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Sticker Pack F",
+    "description": "A pack of food-themed stickers.",
+    "price": 5.49,
+    "category": "Food",
+    "image": "/images/sticker-f.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sticker Pack G",
+    "description": "A pack of travel-themed stickers.",
+    "price": 6.49,
+    "category": "Travel",
+    "image": "/images/sticker-g.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Sticker Pack H",
+    "description": "A pack of vintage-themed stickers.",
+    "price": 7.49,
+    "category": "Vintage",
+    "image": "/images/sticker-h.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sticker Pack I",
+    "description": "A pack of floral-themed stickers.",
+    "price": 6.99,
+    "category": "Floral",
+    "image": "/images/sticker-i.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Sticker Pack J",
+    "description": "A pack of geometric-themed stickers.",
+    "price": 5.99,
+    "category": "Geometric",
+    "image": "/images/sticker-j.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Sticker Pack K",
+    "description": "A pack of abstract-themed stickers.",
+    "price": 6.49,
+    "category": "Abstract",
+    "image": "/images/sticker-k.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Sticker Pack L",
+    "description": "A pack of motivational stickers.",
+    "price": 4.99,
+    "category": "Motivational",
+    "image": "/images/sticker-l.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Sticker Pack M",
+    "description": "A pack of holiday-themed stickers.",
+    "price": 7.99,
+    "category": "Holiday",
+    "image": "/images/sticker-m.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Sticker Pack N",
+    "description": "A pack of sports-themed stickers.",
+    "price": 8.49,
+    "category": "Sports",
+    "image": "/images/sticker-n.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Sticker Pack O",
+    "description": "A pack of music-themed stickers.",
+    "price": 6.99,
+    "category": "Music",
+    "image": "/images/sticker-o.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Sticker Pack P",
+    "description": "A pack of tech-themed stickers.",
+    "price": 7.49,
+    "category": "Tech",
+    "image": "/images/sticker-p.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Sticker Pack Q",
+    "description": "A pack of fantasy-themed stickers.",
+    "price": 8.99,
+    "category": "Fantasy",
+    "image": "/images/sticker-q.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Sticker Pack R",
+    "description": "A pack of comic-themed stickers.",
+    "price": 5.49,
+    "category": "Comic",
+    "image": "/images/sticker-r.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Sticker Pack S",
+    "description": "A pack of superhero-themed stickers.",
+    "price": 6.49,
+    "category": "Superhero",
+    "image": "/images/sticker-s.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Sticker Pack T",
+    "description": "A pack of horror-themed stickers.",
+    "price": 7.99,
+    "category": "Horror",
+    "image": "/images/sticker-t.jpg"
+  }
+]
