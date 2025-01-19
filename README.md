@@ -73,3 +73,11 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Gallery
+![Home](image.png)
+![Products](image-1.png)
+![Products details](image-2.png)
+![Carts](image-3.png)
+![Checkout](image-4.png)
+![Payment Success](image-5.png)
