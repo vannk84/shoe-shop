@@ -1,5 +1,5 @@
 <template>
-  <header :class="{'drop-shadow-md': isScrolled}" class="fixed z-10 flex justify-center w-full py-2 px-4 lg:py-5 lg:px-6 bg-white border-b border-neutral-200 transition-all">
+  <header :class="{'drop-shadow-md': isScrolled}" class="fixed z-50 flex justify-center w-full py-2 px-4 lg:py-5 lg:px-6 bg-white border-b transition-all">
     <div class="flex flex-wrap lg:flex-nowrap items-center flex-row justify-start h-full max-w-[1536px] w-full">
       <a
         href="/"

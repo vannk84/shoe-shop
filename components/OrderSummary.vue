@@ -1,12 +1,12 @@
 <template>
   <div class="w-full bg-white shadow rounded-lg">
     <div class="p-4">
-      <h2 class="font-bold tracking-tight">Order Summary</h2>
+      <h2 >Order Summary</h2>
     </div>
-    <dl class="space-y-6 border-t border-gray-200 px-4 py-6 sm:px-6">
+    <dl class="space-y-6 border-t  px-4 py-6 sm:px-6">
       <div class="flex items-center justify-between">
         <dt class="text-sm">Subtotal</dt>
-        <dd class="text-sm font-medium text-gray-900">
+        <dd class="text-sm font-medium ">
           {{ subtotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
         </dd>
       </div>
@@ -14,24 +14,31 @@
         <dt class="text-sm">Shipping</dt>
         <dd class="text-sm font-medium flex flex-col gap-0.5 text-right">
           {{ deliveryMethod.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
-          <span class="text-gray-500 text-xs">{{ deliveryMethod.type }}</span>
+          <span class="text-secondary text-xs">{{ deliveryMethod.type }}</span>
         </dd>
       </div>
-      <div class="flex items-center justify-between border-t border-gray-200 pt-6">
+      <div class="flex items-center justify-between border-t  pt-6">
         <dt class="text-base font-medium">Total</dt>
-        <dd class="text-base font-medium text-gray-900">
+        <dd class="text-base font-medium ">
           {{ total.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
         </dd>
       </div>
     </dl>
 
-    <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+    <div class="border-t px-4 py-6 sm:px-6">
       <SfButton @click="placeOrder" :disabled="!canPlaceOrder || processingPayment" class="w-full">
         <span v-if="processingPayment">
           <SfLoaderCircular />
         </span>
         <span>Place Order</span>
       </SfButton>
+      <div class="mt-6 text-center text-sm">
+        or
+        <router-link to="/products" class="font-medium text-indigo-600 hover:text-indigo-500">
+          Continue Shopping
+          <span aria-hidden="true"> &rarr;</span>
+        </router-link>
+      </div>
     </div>
   </div>
   <div v-if="paymentSuccess" role="alert"

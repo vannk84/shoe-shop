@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Classic Sneakers",
     "description": "Comfortable and stylish sneakers for everyday wear.",
+    "longDescription": "These classic sneakers are designed for both comfort and style. Perfect for everyday wear, they feature a durable sole and breathable material to keep your feet comfortable all day long.",
     "price": 5.99,
     "category": "Sneakers",
     "image": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -11,6 +12,7 @@
     "id": 2,
     "name": "Durable Boots",
     "description": "Rugged boots built for tough environments.",
+    "longDescription": "Built to withstand the toughest environments, these durable boots offer superior protection and comfort. Ideal for hiking, work, or any outdoor activity.",
     "price": 6.99,
     "category": "Boots",
     "image": "https://images.unsplash.com/photo-1561909848-977d0617f275?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -19,6 +21,7 @@
     "id": 3,
     "name": "Minimal Sandals",
     "description": "Light and breezy sandals for a casual day out.",
+    "longDescription": "Enjoy a casual day out with these minimal sandals. Lightweight and breezy, they provide the perfect balance of comfort and style for warm weather.",
     "price": 4.99,
     "category": "Sandals",
     "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -27,6 +30,7 @@
     "id": 4,
     "name": "Stylish Loafers",
     "description": "Perfect loafers for formal and semi-formal occasions.",
+    "longDescription": "These stylish loafers are perfect for both formal and semi-formal occasions. Crafted with high-quality materials, they offer a sleek look and comfortable fit.",
     "price": 7.99,
     "category": "Loafers",
     "image": "https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?q=80&w=2141&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -35,6 +39,7 @@
     "id": 5,
     "name": "Elegant High Heels",
     "description": "Chic high heels to elevate your outfit.",
+    "longDescription": "Elevate your outfit with these elegant high heels. Chic and sophisticated, they are designed to provide both style and comfort for any special occasion.",
     "price": 8.99,
     "category": "High Heels",
     "image": "https://images.unsplash.com/photo-1519225145634-74cad8193788?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -43,6 +48,7 @@
     "id": 6,
     "name": "Comfortable Slippers",
     "description": "Soft and cozy slippers for lounging at home.",
+    "longDescription": "Lounge at home in comfort with these soft and cozy slippers. Made with plush materials, they offer warmth and relaxation for your feet.",
     "price": 5.49,
     "category": "Slippers",
     "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -51,6 +57,7 @@
     "id": 7,
     "name": "Casual Flip Flops",
     "description": "Relaxed flip flops perfect for the beach or pool.",
+    "longDescription": "Perfect for the beach or pool, these casual flip flops offer a relaxed fit and durable design. Enjoy the sun and water with these comfortable sandals.",
     "price": 6.49,
     "category": "Flip Flops",
     "image": "https://images.unsplash.com/photo-1521774971864-62e842046145?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -59,6 +66,7 @@
     "id": 8,
     "name": "Vintage Clogs",
     "description": "Retro-inspired clogs for a unique look.",
+    "longDescription": "Add a unique touch to your outfit with these vintage clogs. Retro-inspired and stylish, they provide a comfortable fit and distinctive look.",
     "price": 7.49,
     "category": "Clogs",
     "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -67,6 +75,7 @@
     "id": 9,
     "name": "Moccasin Shoes",
     "description": "Casual moccasins for everyday comfort.",
+    "longDescription": "Experience everyday comfort with these casual moccasin shoes. Designed for a relaxed fit, they are perfect for any casual occasion.",
     "price": 6.99,
     "category": "Moccasins",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -75,6 +84,7 @@
     "id": 10,
     "name": "Formal Oxfords",
     "description": "Polished oxfords ideal for professional settings.",
+    "longDescription": "These polished oxfords are ideal for professional settings. They offer a sleek and sophisticated look, perfect for any formal occasion.",
     "price": 5.99,
     "category": "Oxfords",
     "image": "https://images.unsplash.com/photo-1469395446868-fb6a048d5ca3?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

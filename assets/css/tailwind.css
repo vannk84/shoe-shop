@@ -5,6 +5,14 @@
 
 @layer components {
   body {
-    @apply bg-gray-50;
+    @apply bg-gray-50 text-primary;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight
+  }
+
+  h2 {
+    @apply font-bold tracking-tight
   }
 }

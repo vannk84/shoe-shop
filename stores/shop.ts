@@ -34,6 +34,11 @@ export const useShopStore = defineStore("shop", {
       }));
     },
 
+    async fetchProductDetail(id: number) {
+      const data = await $fetch<Product>(`/api/products/${id}`);
+      return data;
+    },
+
     addToCart(product: Product) {
       const existingItem = this.cart.find((item) => item.product.id === product.id);
       if (existingItem) {

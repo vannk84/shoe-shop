@@ -4,7 +4,7 @@
       <p>Your cart is empty</p>
     </div>
     <div v-else>
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
+      <h1>Shopping Cart</h1>
       <div class="w-full flex flex-cols items-start flex-wrap gap-8 mt-12">
         <table class="w-full bg-white flex-[1_0_800px] p-4">
           <thead>
@@ -52,21 +52,28 @@
           </tbody>
         </table>
         <div class="bg-gray-50 border flex-[1_0_200px] p-4 rounded-lg">
-          <h2 class="text-lg font-medium text-gray-900">Summary</h2>
+          <h2 class="text-lg font-medium ">Summary</h2>
           <dl class="mt-6 space-y-4">
             <div class="flex items-center justify-between">
               <dt class="text-sm text-gray-600">Total Items</dt>
-              <dd class="text-sm font-medium text-gray-900">{{ totalItems }}</dd>
+              <dd class="text-sm font-medium ">{{ totalItems }}</dd>
             </div>
             <div class="flex items-center justify-between">
               <dt class="text-sm text-gray-600">Order Total</dt>
-              <dd class="text-sm font-medium text-gray-900">
+              <dd class="text-sm font-medium ">
                 {{ total?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
               </dd>
             </div>
           </dl>
           <div class="mt-6">
             <SfButton @click="checkout" class="w-full">Checkout</SfButton>
+            <div class="mt-6 text-center text-sm">
+              or
+              <router-link to="/products" class="font-medium text-indigo-600 hover:text-indigo-500">
+                Continue Shopping
+                <span aria-hidden="true"> &rarr;</span>
+              </router-link>
+            </div>
           </div>
         </div>
       </div>

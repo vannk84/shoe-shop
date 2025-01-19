@@ -7,18 +7,25 @@ export default <Config>{
     extend: {
       colors: {
         primary: {
-          50: '#f5f9ff',
-          100: '#e9f3ff',
-          200: '#c8e0ff',
-          300: '#a6ccff',
-          400: '#6ea1ff',
-          500: '#3375ff',
-          600: '#2e6ae6',
-          700: '#264ebf',
-          800: '#1d3f99',
-          900: '#132f72',
-        }
-      }
+          DEFAULT: "#ff6600",
+          50: "#fff8ec",
+          100: "#fff0d3",
+          200: "#ffdca5",
+          300: "#ffc26d",
+          400: "#ff9d32",
+          500: "#ff7f0a",
+          600: "#ff6600",
+          700: "#cc4902",
+          800: "#a1390b",
+          900: "#82310c",
+          950: "#461604",
+        },
+      },
+      borderColor: { DEFAULT: "#DCDCDC" },
+      textColor: {
+        primary: "#083344", // Primary text color
+        secondary: "#9095A0", // Secondary text color
+      },
     }
   }
 };
