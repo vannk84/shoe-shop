@@ -1,162 +1,82 @@
 [
   {
     "id": 1,
-    "name": "Sticker Pack A",
-    "description": "A pack of colorful stickers.",
+    "name": "Classic Sneakers",
+    "description": "Comfortable and stylish sneakers for everyday wear.",
     "price": 5.99,
-    "category": "Fun",
-    "image": "/images/sticker-a.jpg"
+    "category": "Sneakers",
+    "image": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 2,
-    "name": "Sticker Pack B",
-    "description": "A pack of nature-themed stickers.",
+    "name": "Durable Boots",
+    "description": "Rugged boots built for tough environments.",
     "price": 6.99,
-    "category": "Nature",
-    "image": "/images/sticker-b.jpg"
+    "category": "Boots",
+    "image": "https://images.unsplash.com/photo-1561909848-977d0617f275?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 3,
-    "name": "Sticker Pack C",
-    "description": "A pack of minimalistic stickers.",
+    "name": "Minimal Sandals",
+    "description": "Light and breezy sandals for a casual day out.",
     "price": 4.99,
-    "category": "Minimal",
-    "image": "/images/sticker-c.jpg"
+    "category": "Sandals",
+    "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 4,
-    "name": "Sticker Pack D",
-    "description": "A pack of animal-themed stickers.",
+    "name": "Stylish Loafers",
+    "description": "Perfect loafers for formal and semi-formal occasions.",
     "price": 7.99,
-    "category": "Animals",
-    "image": "/images/sticker-d.jpg"
+    "category": "Loafers",
+    "image": "https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?q=80&w=2141&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 5,
-    "name": "Sticker Pack E",
-    "description": "A pack of space-themed stickers.",
+    "name": "Elegant High Heels",
+    "description": "Chic high heels to elevate your outfit.",
     "price": 8.99,
-    "category": "Space",
-    "image": "/images/sticker-e.jpg"
+    "category": "High Heels",
+    "image": "https://images.unsplash.com/photo-1519225145634-74cad8193788?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 6,
-    "name": "Sticker Pack F",
-    "description": "A pack of food-themed stickers.",
+    "name": "Comfortable Slippers",
+    "description": "Soft and cozy slippers for lounging at home.",
     "price": 5.49,
-    "category": "Food",
-    "image": "/images/sticker-f.jpg"
+    "category": "Slippers",
+    "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 7,
-    "name": "Sticker Pack G",
-    "description": "A pack of travel-themed stickers.",
+    "name": "Casual Flip Flops",
+    "description": "Relaxed flip flops perfect for the beach or pool.",
     "price": 6.49,
-    "category": "Travel",
-    "image": "/images/sticker-g.jpg"
+    "category": "Flip Flops",
+    "image": "https://images.unsplash.com/photo-1521774971864-62e842046145?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 8,
-    "name": "Sticker Pack H",
-    "description": "A pack of vintage-themed stickers.",
+    "name": "Vintage Clogs",
+    "description": "Retro-inspired clogs for a unique look.",
     "price": 7.49,
-    "category": "Vintage",
-    "image": "/images/sticker-h.jpg"
+    "category": "Clogs",
+    "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 9,
-    "name": "Sticker Pack I",
-    "description": "A pack of floral-themed stickers.",
+    "name": "Moccasin Shoes",
+    "description": "Casual moccasins for everyday comfort.",
     "price": 6.99,
-    "category": "Floral",
-    "image": "/images/sticker-i.jpg"
+    "category": "Moccasins",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 10,
-    "name": "Sticker Pack J",
-    "description": "A pack of geometric-themed stickers.",
+    "name": "Formal Oxfords",
+    "description": "Polished oxfords ideal for professional settings.",
     "price": 5.99,
-    "category": "Geometric",
-    "image": "/images/sticker-j.jpg"
-  },
-  {
-    "id": 11,
-    "name": "Sticker Pack K",
-    "description": "A pack of abstract-themed stickers.",
-    "price": 6.49,
-    "category": "Abstract",
-    "image": "/images/sticker-k.jpg"
-  },
-  {
-    "id": 12,
-    "name": "Sticker Pack L",
-    "description": "A pack of motivational stickers.",
-    "price": 4.99,
-    "category": "Motivational",
-    "image": "/images/sticker-l.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Sticker Pack M",
-    "description": "A pack of holiday-themed stickers.",
-    "price": 7.99,
-    "category": "Holiday",
-    "image": "/images/sticker-m.jpg"
-  },
-  {
-    "id": 14,
-    "name": "Sticker Pack N",
-    "description": "A pack of sports-themed stickers.",
-    "price": 8.49,
-    "category": "Sports",
-    "image": "/images/sticker-n.jpg"
-  },
-  {
-    "id": 15,
-    "name": "Sticker Pack O",
-    "description": "A pack of music-themed stickers.",
-    "price": 6.99,
-    "category": "Music",
-    "image": "/images/sticker-o.jpg"
-  },
-  {
-    "id": 16,
-    "name": "Sticker Pack P",
-    "description": "A pack of tech-themed stickers.",
-    "price": 7.49,
-    "category": "Tech",
-    "image": "/images/sticker-p.jpg"
-  },
-  {
-    "id": 17,
-    "name": "Sticker Pack Q",
-    "description": "A pack of fantasy-themed stickers.",
-    "price": 8.99,
-    "category": "Fantasy",
-    "image": "/images/sticker-q.jpg"
-  },
-  {
-    "id": 18,
-    "name": "Sticker Pack R",
-    "description": "A pack of comic-themed stickers.",
-    "price": 5.49,
-    "category": "Comic",
-    "image": "/images/sticker-r.jpg"
-  },
-  {
-    "id": 19,
-    "name": "Sticker Pack S",
-    "description": "A pack of superhero-themed stickers.",
-    "price": 6.49,
-    "category": "Superhero",
-    "image": "/images/sticker-s.jpg"
-  },
-  {
-    "id": 20,
-    "name": "Sticker Pack T",
-    "description": "A pack of horror-themed stickers.",
-    "price": 7.99,
-    "category": "Horror",
-    "image": "/images/sticker-t.jpg"
+    "category": "Oxfords",
+    "image": "https://images.unsplash.com/photo-1469395446868-fb6a048d5ca3?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]

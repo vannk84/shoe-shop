@@ -6,7 +6,7 @@ export const useShopStore = defineStore("shop", {
     products: [] as Product[],
     categories: [] as Category[],
     cart: [] as CartItem[],
-    loading: false, 
+    loadingProducts: false, 
   }),
   
   getters: {
@@ -15,48 +15,70 @@ export const useShopStore = defineStore("shop", {
 
   actions: {
     async fetchProducts() {
-      this.setLoading(true);
+      this.setLoadingProducts(true);
       const data = await $fetch<Product[]>("/api/products");
       this.products = data;
-      this.setLoading(false);
+      this.setLoadingProducts(false);
     },
     
     async fetchCategories() {
-      this.setLoading(true);
       const data = await $fetch<Category[]>("/api/categories");
       this.categories = data;
-      this.setLoading(false);
     },
 
     async fetchCart() {
-      this.setLoading(true);
       const data = await $fetch<CartItem[]>("/api/cart");
-      this.cart = data;
-      this.setLoading(false);
+      this.cart = data.map(item => ({
+        ...item,
+        subTotal: item.product.price * item.quantity
+      }));
     },
 
-    addToCart(productId: number) {
-      const existingItem = this.cart.find((item) => item.productId === productId);
+    addToCart(product: Product) {
+      const existingItem = this.cart.find((item) => item.product.id === product.id);
       if (existingItem) {
         existingItem.quantity++;
+        existingItem.subTotal = existingItem.product.price * existingItem.quantity;
       } else {
-        this.cart.push({ productId, quantity: 1 });
+        this.cart.push({ product, quantity: 1, subTotal: product.price });
       }
     },
 
     removeFromCart(productId: number) {
-      this.cart = this.cart.filter((item) => item.productId !== productId);
+      console.log("Removing product with ID", productId);
+      this.cart = this.cart.filter((item) => item.product.id !== productId);
     },
 
     updateCartQuantity(productId: number, quantity: number) {
-      const cartItem = this.cart.find((item) => item.productId === productId);
+      const cartItem = this.cart.find((item) => item.product.id === productId);
       if (cartItem) {
         cartItem.quantity = quantity;
+        cartItem.subTotal = cartItem.product.price * quantity;
       }
     },
 
-    setLoading(loading: boolean) {
-      this.loading= loading;
+    increaseQuantity(productId: number) {
+      const cartItem = this.cart.find((item) => item.product.id === productId);
+      if (cartItem) {
+        cartItem.quantity++;
+        cartItem.subTotal = cartItem.product.price * cartItem.quantity;
+      }
+    },
+    
+    decreaseQuantity(productId: number) {
+      const cartItem = this.cart.find((item) => item.product.id === productId);
+      if (cartItem && cartItem.quantity > 1) {
+        cartItem.quantity--;
+        cartItem.subTotal = cartItem.product.price * cartItem.quantity;
+      }
+    },
+
+    setLoadingProducts(loading: boolean) {
+      this.loadingProducts = loading;
+    },
+
+    checkout() {
+      this.router.push('/checkout');
     },
   },
 });

@@ -1,1 +1,0 @@
-<SfLoaderCircular v-if="loading" size="2xl" />

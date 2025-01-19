@@ -25,7 +25,7 @@
       </router-link>
       <nav class="flex-1 flex justify-end lg:order-last lg:ml-4">
         <div class="flex flex-row flex-nowrap">
-          <router-link to="/checkout" class="lg:flex lg:mr-4">
+          <router-link to="/cart" class="lg:flex lg:mr-4">
             <SfButton
               class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700 relative"
               aria-label="Cart"
@@ -35,7 +35,10 @@
               <template #prefix>
                 <Component :is="SfIconShoppingCart" />
               </template>
-              <span class="inline-flex whitespace-nowrap text-red-500 text-md absolute top-0 right-0 -mt-1 -mr-3 px-2">
+              <span
+                v-if="cartItemCount > 0"
+                class="inline-flex whitespace-nowrap text-red-500 text-md absolute top-0 right-0 -mt-1 -mr-3 px-2"
+              >
                 {{ cartItemCount }}
               </span>
             </SfButton>

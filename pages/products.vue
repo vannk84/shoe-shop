@@ -10,11 +10,13 @@
 </script>
 
 <template>
-  <div>
-    <SfLoaderCircular v-if="shopStore.loadingProducts" size="2xl" />
-    <ul v-else class="flex flex-wrap gap-4">
-      <li v-for="product in shopStore.products" :key="product.id" class="flex-[1_0_250px]">
-        <ProductItem :product="product" />
+  <div class="bg-white p-4 shadow rounded-lg">
+    <div v-if="shopStore.loadingProducts" class="flex items-center justify-center w-full mt-32">
+      <SfLoaderCircular size="2xl" />
+    </div>
+    <ul v-else class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+      <li v-for="product in shopStore.products" :key="product.id">
+        <ProductCard :product="product" />
       </li>
     </ul>
   </div>

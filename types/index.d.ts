@@ -13,6 +13,33 @@ export interface Category {
 }
 
 export interface CartItem {
-  productId: number;
   quantity: number;
+  subTotal: number;
+  product: Product;
+}
+
+export interface CCInfo {
+  cardNumber: string;
+  expiryMonth: number;
+  expiryYear: number;
+  cvv: string;
+  amount: number;
+  currency?: string;
+}
+
+export interface LineItem extends Product {
+  quantity: number;
+  subTotal: number;
+}
+
+export interface ShippingInfo {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  country: string;
+  street: string;
+  aptNo: string;
+  city: string;
+  state: string;
+  zipCode: string;
 }

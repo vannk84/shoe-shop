@@ -3,11 +3,9 @@
     <div class="relative">
       <SfLink href="#" class="block flex items-center justify-center">
         <img
-          src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/sneakers.png"
+          :src="product.image"
           alt="Great product"
-          class="block object-cover h-auto rounded-md aspect-square"
-          width="300"
-          height="300"
+          class="w-full block object-cover h-auto rounded-t aspect-square"
         />
       </SfLink>
       <SfButton
@@ -44,17 +42,17 @@
 </template>
 
 <script lang="ts" setup>
-  import { SfRating, SfCounter, SfLink, SfButton, SfIconShoppingCart, SfIconFavorite } from '@storefront-ui/vue';
+  import { SfButton, SfCounter, SfIconFavorite, SfIconShoppingCart, SfLink, SfRating } from '@storefront-ui/vue';
   import { useShopStore } from '~/stores/shop';
-  const props = defineProps({
-    product: {
-      type: Object,
-      required: true
-    }
-  });
+  import type { Product } from '~/types';
+
+  const props = defineProps<{
+    product: Product;
+  }>();
+  
   const shopStore = useShopStore();
 
   const handleAddToCart = () => {
-    shopStore.addToCart(props.product.id);
+    shopStore.addToCart(props.product);
   };
 </script>
