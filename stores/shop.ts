@@ -45,7 +45,6 @@ export const useShopStore = defineStore("shop", {
     },
 
     removeFromCart(productId: number) {
-      console.log("Removing product with ID", productId);
       this.cart = this.cart.filter((item) => item.product.id !== productId);
     },
 
@@ -77,8 +76,8 @@ export const useShopStore = defineStore("shop", {
       this.loadingProducts = loading;
     },
 
-    checkout() {
-      this.router.push('/checkout');
+    clearCart() {
+      this.cart = [];
     },
   },
 });

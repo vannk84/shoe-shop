@@ -19,30 +19,33 @@
       <div class="flex flex-wrap gap-4 max-w-[600px]">
         <div class="flex-[1_0_300px]">
           <label class="w-full flex flex-col gap-0.5 text-gray-500">
-            <span class="typography-text-sm font-medium">Card number</span>
-            <SfInput v-model="paymentDetails.cardNumber" label="Card Number" autocomplete="cc-number"
+            <span class="typography-text-sm font-medium after:content-['*'] after:text-red-500 after:ml-1">
+              Card number
+              (<span class="text-xs text-gray-500">4111111111111111</span>)
+            </span>
+            <SfInput v-model="paymentDetails.cardNumber" @input="updatePaymentDetails('cardNumber', $event.target.value)" label="Card Number" autocomplete="cc-number"
               placeholder="4111111111111111" />
           </label>
         </div>
   
         <div class="flex-[1_0_300px]">
           <label class="w-full flex flex-col gap-0.5 text-gray-500">
-            <span class="typography-text-sm font-medium">Name on card</span>
-            <SfInput v-model="paymentDetails.cardName" label="Name on card" autocomplete="cc-name" />
+            <span class="typography-text-sm font-medium after:content-['*'] after:text-red-500 after:ml-1">Name on card</span>
+            <SfInput v-model="paymentDetails.cardName" @input="updatePaymentDetails('cardName', $event.target.value)" label="Name on card" autocomplete="cc-name" />
           </label>
         </div>
   
         <div class="flex-[1_0_300px]">
           <label class="w-full flex flex-col gap-0.5 text-gray-500">
-            <span class="typography-text-sm font-medium">Expiration date (MM/YY)</span>
-            <SfInput v-model="paymentDetails.expiryDate" label="Expiry Date" autocomplete="cc-exp" />
+            <span class="typography-text-sm font-medium after:content-['*'] after:text-red-500 after:ml-1">Expiration date (MM/YYYY)</span>
+            <SfInput v-model="paymentDetails.expiryDate" @input="updatePaymentDetails('expiryDate', $event.target.value)" label="Expiry Date" autocomplete="cc-exp" />
           </label>
         </div>
   
         <div class="flex-[1_0_100px]">
           <label class="w-full flex flex-col gap-0.5 text-gray-500">
-            <span class="typography-text-sm font-medium">CVC</span>
-            <SfInput v-model="paymentDetails.cvv" label="CVV" autocomplete="csc" />
+            <span class="typography-text-sm font-medium after:content-['*'] after:text-red-500 after:ml-1">CVC</span>
+            <SfInput v-model="paymentDetails.cvv" @input="updatePaymentDetails('cvv', $event.target.value)" label="CVV" autocomplete="csc" />
           </label>
         </div>
       </div>
@@ -86,9 +89,13 @@ export default {
   components: { SfInput, SfButton },
   setup() {
     const shopStore = useCheckoutStore();
+    const updatePaymentDetails = (field, value) => {
+      shopStore.updatePaymentDetails({ [field]: value });
+    };
     return {
       paymentDetails: shopStore.paymentDetails,
-      paymentMethods
+      paymentMethods,
+      updatePaymentDetails
     };
   }
 };

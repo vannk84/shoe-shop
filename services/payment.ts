@@ -7,8 +7,8 @@ class MockPaymentGateway {
   constructor() {
     this.transactions = new Map();
     this.cards = new Map([
-      ['4111111111111111', { valid: true, funds: 1000000 }],
-      ['4242424242424242', { valid: true, funds: 5008 }],
+      ['4111111111111111', { valid: true, funds: 10000 }],
+      ['4242424242424242', { valid: true, funds: 50 }],
       ['4000000000000002', { valid: false, funds: 0 }]
     ]);
   }

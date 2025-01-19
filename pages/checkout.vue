@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-8">
+  <form class="flex flex-wrap gap-8">
     <div class="flex-[1_0_300px]  lg:flex-[1_0_600px] flex flex-col gap-8">
       <ShippingDetails />
       <DeliveryMethod  />
@@ -8,7 +8,7 @@
     <div class="flex-[1_0_200px]">
       <OrderSummary />
     </div>
-  </div>
+  </form>
 </template>
 
 <script>

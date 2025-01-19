@@ -38,7 +38,6 @@ export interface ShippingInfo {
   phone: string;
   country: string;
   street: string;
-  aptNo: string;
   city: string;
   state: string;
   zipCode: string;

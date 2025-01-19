@@ -12,7 +12,6 @@ export const useCheckoutStore = defineStore("checkout", {
       phone: '',
       country: '',
       street: '',
-      aptNo: '',
       city: '',
       state: '',
       zipCode: '',
@@ -32,6 +31,7 @@ export const useCheckoutStore = defineStore("checkout", {
     transactionId: '',
     error: '',
     paymentMethod: '',
+    processingPayment: false,
   }),
   getters: {
     getShippingInfo(state) {
@@ -45,11 +45,19 @@ export const useCheckoutStore = defineStore("checkout", {
     },
     total(state) {
       return state.lineItems.reduce((total, item) => total + item.subTotal, 0) + state.deliveryMethod.price;
+    },
+    isShippingInfoComplete(state) {
+      return Object.values(state.shippingInfo).every(value => value !== '');
+    },
+    isPaymentDetailsComplete(state) {
+      return Object.values(state.paymentDetails).every(value => value !== '');
+    },
+    isDeliveryMethodComplete(state) {
+      return state.deliveryMethod.type !== '' && state.deliveryMethod.price > 0;
     }
   },
   actions: {
     updateShippingInfo(info: ShippingInfo) {
-      console.log('Updating shipping info', info);
       this.shippingInfo = { ...this.shippingInfo, ...info };
     },
     async fetchLineItems() {
@@ -61,30 +69,62 @@ export const useCheckoutStore = defineStore("checkout", {
     async processPayment() {
       this.error = '';
       this.paymentSuccess = false;
+      this.processingPayment = true;
       try {
-        this.paymentDetails.amount = this.lineItems.reduce((total, item) => total + item.subTotal, 0) + this.deliveryMethod.price;
+        this.paymentDetails.amount = this.total;
+        const [expiryMonth, expiryYear] = this.paymentDetails.expiryDate.split('/').map(Number);
         const paymentInfo = {
           ...this.paymentDetails,
-          expiryMonth: parseInt(this.paymentDetails.expiryDate.split('/')[0]),
-          expiryYear: parseInt(this.paymentDetails.expiryDate.split('/')[1]),
+          expiryMonth,
+          expiryYear,
           deliveryMethod: this.deliveryMethod.type
         };
 
         const result = await paymentGateway.processPayment(paymentInfo);
-        this.paymentSuccess = true;
+        this.paymentSuccess = !!result;
         this.transactionId = result.transactionId;
-        this.paymentMethod = this.paymentDetails.cardName;
-      } catch (err) {
-        if (err instanceof Error) {
-          this.error = err.message || 'Payment failed';
-        } else {
-          this.error = 'Payment failed';
+        if (!!result) {
+          const shopStore = useShopStore();
+          shopStore.clearCart();
+          this.clearCheckoutData();
         }
+      } catch (err) {
+        this.error = err instanceof Error ? err.message || 'Payment failed' : 'Payment failed';
+      } finally {
+        this.processingPayment = false;
       }
     },
+    clearCheckoutData() {
+      this.lineItems = [];
+      this.shippingInfo = {
+        firstName: '',
+        lastName: '',
+        phone: '',
+        country: '',
+        street: '',
+        city: '',
+        state: '',
+        zipCode: '',
+      };
+      this.paymentDetails = {
+        cardNumber: '',
+        cardName: '',
+        expiryDate: '',
+        cvv: '',
+        amount: 0
+      };
+      this.deliveryMethod = {
+        type: 'Standard',
+        price: 5.00
+      };
+      this.paymentMethod = '';
+      this.processingPayment = false;
+    },
     setDeliveryMethod(type: string, price: number) {
-      console.log('Delivery method set to', this.deliveryMethod);
       this.deliveryMethod = { type, price };
+    },
+    updatePaymentDetails(details: Partial<typeof this.paymentDetails>) {
+      this.paymentDetails = { ...this.paymentDetails, ...details };
     }
   }
 });
