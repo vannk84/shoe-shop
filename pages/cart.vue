@@ -48,7 +48,7 @@
                             <SfIconRemove />
                           </SfButton>
                           <SfInput aria-label="Label size base" type="number" v-model="item.quantity" min="1"
-                            @change="updateQuantity(item.productId, item.quantity)"
+                            @change="updateQuantity(item.product.id, Number($event.target.value))"
                             wrapperClass="rounded-none border !shadow-none !ring-0 max-w-[80px] overflow-hidden" />
                           <SfButton :square="true" variant="secondary" @click="increaseQuantity(item.product.id)"
                             class="rounded-none border border-l-0 !shadow-none !ring-0 h-[40px]">
@@ -78,7 +78,7 @@
                     <SfIconRemove />
                   </SfButton>
                   <SfInput aria-label="Label size base" type="number" v-model="item.quantity" min="1"
-                    @change="updateQuantity(item.productId, item.quantity)"
+                    @change="updateQuantity(item.product.id, Number($event.target.value))"
                     wrapperClass="rounded-none border !shadow-none !ring-0 max-w-[80px] overflow-hidden" />
                   <SfButton :square="true" variant="secondary" @click="increaseQuantity(item.product.id)"
                     class="rounded-none border border-l-0 !shadow-none !ring-0 h-[40px]">

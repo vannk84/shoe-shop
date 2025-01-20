@@ -57,7 +57,7 @@ export const useShopStore = defineStore("shop", {
       const cartItem = this.cart.find((item) => item.product.id === productId);
       if (cartItem) {
         cartItem.quantity = quantity;
-        cartItem.subTotal = cartItem.product.price * quantity;
+        cartItem.subTotal = cartItem.product.price * cartItem.quantity;
       }
     },
 
