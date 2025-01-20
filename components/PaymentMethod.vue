@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-4 shadow rounded-lg">
+  <Paper>
     <h2 >Payment method</h2>
     <fieldset class="mt-4">
       <div class="grid grid-cols-2 gap-4 items-stretch">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </Paper>
 </template>
 
 <script>

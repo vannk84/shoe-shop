@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-4 shadow rounded-lg">
+  <Paper>
     <h2 >Shipping address</h2>
     <div class="flex gap-4 flex-wrap mt-4">
       <label class="w-full md:w-auto flex-grow flex flex-col gap-0.5 md:mt-0 text-secondary">
@@ -53,7 +53,7 @@
           v-model="shippingInfo.zipCode" />
       </label>
     </div>
-  </div>
+  </Paper>
 </template>
 
 <script lang="ts">

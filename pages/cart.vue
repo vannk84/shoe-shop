@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-4 shadow rounded-lg">
+  <Paper>
     <div v-if="cartItems.length === 0" class="empty-cart">
       <p>Your cart is empty</p>
     </div>
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </Paper>
 </template>
 
 <script>

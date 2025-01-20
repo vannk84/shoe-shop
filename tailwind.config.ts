@@ -7,7 +7,7 @@ export default <Config>{
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#ff6600",
+          DEFAULT: "#ff7f0a",
           50: "#fff8ec",
           100: "#fff0d3",
           200: "#ffdca5",

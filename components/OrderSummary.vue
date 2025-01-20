@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white shadow rounded-lg">
+  <Paper class="w-full">
     <div class="p-4">
       <h2 >Order Summary</h2>
     </div>
@@ -40,7 +40,7 @@
         </router-link>
       </div>
     </div>
-  </div>
+  </Paper>
   <div v-if="paymentSuccess" role="alert"
     class="mt-4 flex items-start md:items-center max-w-[600px] shadow-md bg-positive-100 pr-2 pl-4 ring-1 ring-positive-200 typography-text-sm md:typography-text-base py-1 rounded-md">
     <SfIconCheckCircle class="my-2 mr-2 text-positive-700 shrink-0" />

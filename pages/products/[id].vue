@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white">
-    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+  <Paper>
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-12 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
       <!-- Product details -->
       <div class="lg:max-w-lg lg:self-end">
         <div class="mt-4">
@@ -104,7 +104,7 @@
         </section>
       </div>
     </div>
-  </div>
+  </Paper>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-4 shadow rounded-lg">
+  <Paper>
     <fieldset>
       <legend class="text-lg font-medium ">Delivery method</legend>
       <div class="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
@@ -27,7 +27,7 @@
         </label>
       </div>
     </fieldset>
-  </div>
+  </Paper>
 </template>
 
 <script setup>

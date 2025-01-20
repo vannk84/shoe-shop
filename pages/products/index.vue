@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <div class="bg-white p-4 shadow rounded-lg">
+  <Paper>
     <div v-if="shopStore.loadingProducts" class="flex items-center justify-center w-full mt-32">
       <SfLoaderCircular size="2xl" />
     </div>
@@ -19,5 +19,5 @@
         <ProductCard :product="product" />
       </li>
     </ul>
-  </div>
+  </Paper>
 </template>
