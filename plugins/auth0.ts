@@ -36,6 +36,8 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       auth0: {
         login: async () => {
           await auth0Client?.loginWithRedirect();
+          const user = await auth0Client?.getUser();
+          eventBus.emit('loginSuccess', { user });
         },
         loginWithPopup: async () => {
           try {
@@ -45,6 +47,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
             saveAuthToStorage(isAuthenticated, user);
             eventBus.emit('loginSuccess', { user });
+
             return { isAuthenticated, user };
           } catch (error) {
             console.error('Login with Popup Error:', error);
@@ -59,14 +62,6 @@ export default defineNuxtPlugin(async (nuxtApp) => {
         },
         getUser: async () => {
           return await auth0Client?.getUser();
-        },
-        handleRedirectCallback: async () => {
-          console.log('handleRedirectCallback');
-          const result = await auth0Client?.handleRedirectCallback();
-          const isAuthenticated = (await auth0Client?.isAuthenticated()) ?? false;
-          const user = await auth0Client?.getUser();
-          saveAuthToStorage(isAuthenticated, user);
-          return result;
         },
         loadFromStorage: () => getAuthFromStorage(),
       },

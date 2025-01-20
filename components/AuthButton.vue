@@ -24,13 +24,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed } from 'vue';
+import { computed, defineComponent, onMounted, ref } from 'vue';
 import eventBus from '~/utils/eventBus';
-import {
-  SfButton,
-  SfIconPerson,
-  SfIconLogout,
-} from '@storefront-ui/vue';
 
 export default defineComponent({
   setup() {
@@ -63,12 +58,7 @@ export default defineComponent({
       if (storedAuth.isAuthenticated) {
         isAuthenticated.value = storedAuth.isAuthenticated;
         auth0.user = storedAuth.user;
-      } else if (window.location.search.includes('code=')) {
-        await auth0.handleRedirectCallback();
-        window.history.replaceState({}, document.title, window.location.pathname);
-        isAuthenticated.value = true;
-        auth0.user = await auth0.getUser();
-      }
+      } 
     };
 
     onMounted(loadAuthState);
