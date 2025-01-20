@@ -43,19 +43,7 @@
               </span>
             </SfButton>
           </router-link>
-          <router-link to="/" class="lg:flex lg:mr-4">
-            <SfButton
-              class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700 relative"
-              aria-label="Log in"
-              variant="tertiary"
-              square
-            >
-              <template #prefix>
-                <Component :is="SfIconPerson" />
-              </template>
-              <span class="hidden xl:inline-flex whitespace-nowrap">Log in</span>
-            </SfButton>
-          </router-link>
+          <AuthButton />
         </div>
       </nav>
     </div>
@@ -63,14 +51,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
-import { useShopStore } from '~/stores/shop';
 import {
   SfButton,
-  SfIconShoppingCart,
-  SfIconPerson,
   SfIconMenu,
+  SfIconShoppingCart
 } from '@storefront-ui/vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { useShopStore } from '~/stores/shop';
+import AuthButton from './AuthButton.vue';
 
 const shopStore = useShopStore();
 const cartItemCount = computed(() => shopStore.cartItemCount);
