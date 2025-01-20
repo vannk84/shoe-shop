@@ -11,14 +11,14 @@
     <span class="hidden xl:inline-flex whitespace-nowrap">Log in</span>
   </SfButton>
   <SfButton
-    class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700 relative"
+    class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700 relative group"
     aria-label="Log in"
     variant="tertiary"
     square
     v-if="isAuthenticated"
     @click="logout"
   >
-    <SfIconLogout/>
+    <span class="text-red-500 group-hover:text-red-400"><SfIconLogout/></span>
     <span v-if="user" class="hidden xl:inline-flex whitespace-nowrap">{{ user.name }}</span>
   </SfButton>
 </template>
