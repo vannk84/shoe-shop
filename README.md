@@ -81,12 +81,3 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ![Carts](image-3.png)
 ![Checkout](image-4.png)
 ![Payment Success](image-5.png)
-
-
-## Video demo
-### Register
-![Register](auth0-register.mp4)
-### Login & Logout
-![Login & Logout](auth0-login-logout.mp4)
-### Go Through
-![Go Through](go-through.mp4)
