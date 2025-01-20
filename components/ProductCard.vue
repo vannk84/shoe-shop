@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full flex flex-col justify-between border rounded-md hover:shadow-lg transition-shadow">
+  <div class="w-full h-full dark:bg-slate-900 flex flex-col justify-between border rounded-md hover:shadow-lg transition-shadow">
     <div class="relative border-b">
       <router-link :to="`/products/${product.id}`"
         class="flex items-center justify-center rounded-t-md overflow-hidden">
