@@ -4,7 +4,7 @@
       <p>Your cart is empty</p>
     </div>
     <div v-else>
-      <h1>Shopping Cart</h1>
+      <h2>Shopping Cart</h2>
       <div class="w-full flex flex-cols items-start flex-wrap gap-8 mt-12">
         <table class="w-full bg-white flex-[1_0_800px] p-4">
           <thead>
@@ -22,8 +22,8 @@
                   <img :src="item.product.image" :alt="item.product.name"
                     class="aspect-square max-w-[100px] object-contain" />
                   <div class="item-details">
-                    <h2>{{ item.product.name }}</h2>
-                    <p class="max-w-[200px]">{{ item.product.description }}</p>
+                    <h3>{{ item.product.name }}</h3>
+                    <p class="max-w-[200px] text-secondary">{{ item.product.description }}</p>
                   </div>
                 </div>
               </td>

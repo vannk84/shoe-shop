@@ -13,6 +13,14 @@
   }
 
   h2 {
+    @apply text-2xl font-bold tracking-tight
+  }
+
+  h3 {
     @apply font-bold tracking-tight
+  }
+
+  table thead tr th {
+    @apply text-secondary font-semibold
   }
 }

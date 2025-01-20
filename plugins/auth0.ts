@@ -1,4 +1,5 @@
 import { Auth0Client } from '@auth0/auth0-spa-js';
+import eventBus from '~/utils/eventBus';
 
 let auth0Client: Auth0Client | null = null;
 
@@ -35,6 +36,19 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       auth0: {
         login: async () => {
           await auth0Client?.loginWithRedirect();
+        },
+        loginWithPopup: async () => {
+          try {
+            await auth0Client?.loginWithPopup();
+            const user = await auth0Client?.getUser();
+            const isAuthenticated = !!user;
+
+            saveAuthToStorage(isAuthenticated, user);
+            eventBus.emit('loginSuccess', { user });
+            return { isAuthenticated, user };
+          } catch (error) {
+            console.error('Login with Popup Error:', error);
+          }
         },
         logout: async () => {
           await auth0Client?.logout({ logoutParams: { returnTo: window.location.origin } });

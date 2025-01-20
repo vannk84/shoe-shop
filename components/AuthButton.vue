@@ -5,7 +5,7 @@
     variant="tertiary"
     square
     v-if="!isAuthenticated"
-    @click="login"
+    @click="loginWithPopup"
   >
     <SfIconPerson/>
     <span class="hidden xl:inline-flex whitespace-nowrap">Log in</span>
@@ -24,7 +24,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+import { defineComponent, ref, onMounted, computed } from 'vue';
+import eventBus from '~/utils/eventBus';
 import {
   SfButton,
   SfIconPerson,
@@ -34,9 +35,13 @@ import {
 export default defineComponent({
   setup() {
     const isAuthenticated = ref(false);
-    const user = ref(null);
-
     const auth0 = useNuxtApp().$auth0;
+
+    const user = computed(() => auth0.user);
+
+    const loginWithPopup = async () => {
+      await auth0.loginWithPopup();
+    };
 
     const login = async () => {
       await auth0.login();
@@ -45,26 +50,30 @@ export default defineComponent({
     const logout = async () => {
       await auth0.logout();
       isAuthenticated.value = false;
-      user.value = null;
+      auth0.user = null;
     };
 
     const loadAuthState = async () => {
+      eventBus.on('loginSuccess', ({ user: loggedInUser }) => {
+        isAuthenticated.value = true;
+        auth0.user = loggedInUser;
+      });
+      
       const storedAuth = auth0.loadFromStorage();
       if (storedAuth.isAuthenticated) {
         isAuthenticated.value = storedAuth.isAuthenticated;
-        user.value = storedAuth.user;
+        auth0.user = storedAuth.user;
       } else if (window.location.search.includes('code=')) {
         await auth0.handleRedirectCallback();
-        console.log({storedAuth});
         window.history.replaceState({}, document.title, window.location.pathname);
         isAuthenticated.value = true;
-        user.value = await auth0.getUser();
+        auth0.user = await auth0.getUser();
       }
     };
 
     onMounted(loadAuthState);
 
-    return { login, logout, isAuthenticated, user };
+    return { login, loginWithPopup, logout, isAuthenticated, user };
   },
 });
 </script>
