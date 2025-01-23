@@ -77,10 +77,3 @@ export const useCartStore = defineStore("cart", {
     }
   },
 });
-
-if (typeof window !== 'undefined') {
-  window.addEventListener('load', () => {
-    const cartStore = useCartStore();
-    cartStore.loadCart();
-  });
-}

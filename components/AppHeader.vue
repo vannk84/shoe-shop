@@ -77,6 +77,7 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  cartStore.loadCart();
 });
 
 onUnmounted(() => {
