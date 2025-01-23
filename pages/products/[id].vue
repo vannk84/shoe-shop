@@ -110,6 +110,7 @@
 <script>
 import { useRoute } from '#app';
 import { useShopStore } from '~/stores/shop';
+import { useCartStore } from '~/stores/cart'; // Add this line
 import { ref, onMounted } from 'vue';
 
 export default {
@@ -117,10 +118,11 @@ export default {
     const route = useRoute();
     const productId = route.params.id;
     const shopStore = useShopStore();
+    const cartStore = useCartStore(); // Add this line
     const product = ref(null);
 
     const handleAddToCart = (product) => {
-      shopStore.addToCart(product);
+      cartStore.addToCart(product); // Update this line
     };
 
     onMounted(async () => {

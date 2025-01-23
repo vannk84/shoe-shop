@@ -57,11 +57,11 @@ import {
   SfIconShoppingCart
 } from '@storefront-ui/vue';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
-import { useShopStore } from '~/stores/shop';
+import { useCartStore } from '~/stores/cart';
 import AuthButton from './AuthButton.vue';
 
-const shopStore = useShopStore();
-const cartItemCount = computed(() => shopStore.cartItemCount);
+const cartStore = useCartStore();
+const cartItemCount = computed(() => cartStore.cartItemCount);
 
 const inputValue = ref('');
 

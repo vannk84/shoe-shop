@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import type { LineItem, ShippingInfo } from "~/types";
 import paymentGateway from '~/services/payment';
-import { useShopStore } from '~/stores/shop';
+import { useCartStore } from '~/stores/cart';
 
 export const useCheckoutStore = defineStore("checkout", {
   state: () => ({
@@ -61,8 +61,8 @@ export const useCheckoutStore = defineStore("checkout", {
       this.shippingInfo = { ...this.shippingInfo, ...info };
     },
     async fetchLineItems() {
-      const shopStore = useShopStore();
-      this.lineItems = shopStore.cart.map(item => ({
+      const cartStore = useCartStore();
+      this.lineItems = cartStore.cart.map(item => ({
         quantity: item.quantity, subTotal: item.subTotal, ...item.product
       }));
     },
@@ -84,8 +84,8 @@ export const useCheckoutStore = defineStore("checkout", {
         this.paymentSuccess = !!result;
         this.transactionId = result.transactionId;
         if (!!result) {
-          const shopStore = useShopStore();
-          shopStore.clearCart();
+          const cartStore = useCartStore();
+          cartStore.clearCart();
           this.clearCheckoutData();
         }
       } catch (err) {

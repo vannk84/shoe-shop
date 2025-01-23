@@ -38,16 +38,16 @@
 
 <script lang="ts" setup>
 import { SfButton, SfCounter, SfIconShoppingCart, SfLink, SfRating } from '@storefront-ui/vue';
-import { useShopStore } from '~/stores/shop';
+import { useCartStore } from '~/stores/cart';
 import type { Product } from '~/types';
 
 const props = defineProps<{
   product: Product;
 }>();
 
-const shopStore = useShopStore();
+const cartStore = useCartStore();
 
 const handleAddToCart = () => {
-  shopStore.addToCart(props.product);
+  cartStore.addToCart(props.product);
 };
 </script>

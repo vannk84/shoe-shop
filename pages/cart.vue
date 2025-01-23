@@ -126,16 +126,16 @@
 </template>
 
 <script>
-import { useShopStore } from '~/stores/shop';
+import { useCartStore } from '~/stores/cart';
 
 export default {
   setup() {
-    const shopStore = useShopStore();
-    return { shopStore };
+    const cartStore = useCartStore();
+    return { cartStore };
   },
   computed: {
     cartItems() {
-      return this.shopStore.cart;
+      return this.cartStore.cart;
     },
     totalItems() {
       return this.cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -146,16 +146,16 @@ export default {
   },
   methods: {
     removeFromCart(productId) {
-      this.shopStore.removeFromCart(productId);
+      this.cartStore.removeFromCart(productId);
     },
     updateQuantity(productId, quantity) {
-      this.shopStore.updateCartQuantity(productId, quantity);
+      this.cartStore.updateCartQuantity(productId, quantity);
     },
     increaseQuantity(productId) {
-      this.shopStore.increaseQuantity(productId);
+      this.cartStore.increaseQuantity(productId);
     },
     decreaseQuantity(productId) {
-      this.shopStore.decreaseQuantity(productId);
+      this.cartStore.decreaseQuantity(productId);
     },
     checkout() {
       this.$router.push('/checkout');
